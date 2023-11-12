@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework 2</title>
+    <title>Homework 6</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
@@ -23,20 +23,20 @@
 
 
 
-        <nav class="nav">
+        <nav class="nav-div">
           <a class="logo" href="./index.html"
             >Web<span class="half-logo">Studio</span>
           </a>
-          <ul class="nav-links">
-            <li class="nav-list">
+          <ul class="nav-list">
+            <li class="nav-links">
               <a class="nav-list-links" href="./index.html">Studio</a>
             </li>
 
-            <li class="nav-list">
+            <li class="nav-links">
               <a class="nav-list-links" href="">Portfolio</a>
             </li>
 
-            <li class="nav-list">
+            <li class="nav-links">
               <a class="nav-list-links" href="">Contacts</a>
             </li>
           </ul>
@@ -62,10 +62,10 @@
     </header>
 
     <main>
-      <section class="section-first">
+      <section class="hero-section">
         <div class="container">
           <h1 class="page-title">Effective Solutions for Your Business</h1>
-          <button class="button" type="button">Order Service</button>
+          <button class="button" type="button" data-modal-open>Order Service</button>
         </div>
       </section>
 
@@ -75,7 +75,7 @@
 
           <ul class="advantages-list">
             <li class="advantages-item">
-              <div class="pic">
+              <div class="advantages-div">
                 <svg width="64" height="64">
                   <use href="./images/icons.svg#icon-Vector"></use>
                 </svg>
@@ -90,7 +90,7 @@
             </li>
 
             <li class="advantages-item">
-              <div class="pic">
+              <div class="advantages-div">
                 <svg width="64" height="64">
                   <use href="./images/icons.svg#icon-Vector2"></use>
                 </svg>
@@ -103,7 +103,7 @@
             </li>
 
             <li class="advantages-item">
-              <div class="pic">
+              <div class="advantages-div">
                 <svg width="64" height="64">
                   <use href="./images/icons.svg#icon-Vector3"></use>
                 </svg>
@@ -116,7 +116,7 @@
             </li>
 
             <li class="advantages-item">
-              <div class="pic">
+              <div class="advantages-div">
                 <svg width="64" height="64">
                   <use href="./images/icons.svg#icon-astronaut-1"></use>
                 </svg>
@@ -145,8 +145,8 @@
             Mark"
               />
               <div class="name-position">
-                <h3 class="name">Mark Guerrero</h3>
-                <p class="position">Product Designer</p>
+                <h3 class="worker-name">Mark Guerrero</h3>
+                <p class="worker-position">Product Designer</p>
 
 
 
@@ -196,8 +196,8 @@
             Tom"
               />
               <div class="name-position">
-                <h3 class="name">Tom Ford</h3>
-                <p class="position">Frontend Developer</p>
+                <h3 class="worker-name">Tom Ford</h3>
+                <p class="worker-position">Frontend Developer</p>
 
 
                 <ul class="worker-social-media">
@@ -246,8 +246,8 @@
             Camila"
               />
               <div class="name-position">
-                <h3 class="name">Camila Garcia</h3>
-                <p class="position">Marketing</p>
+                <h3 class="worker-name">Camila Garcia</h3>
+                <p class="worker-position">Marketing</p>
 
 
                 <ul class="worker-social-media">
@@ -296,8 +296,8 @@
             Daniel"
               />
               <div class="name-position">
-                <h3 class="name">Daniel Wilson</h3>
-                <p class="position">UI Designer</p>
+                <h3 class="worker-name">Daniel Wilson</h3>
+                <p class="worker-position">UI Designer</p>
 
                 <ul class="worker-social-media">
                   <li class="media-icon">
@@ -513,21 +513,21 @@
       </div>
 
 
-      <div class="footer-form">
+      <div class="footer-form-div">
 
         <p class="form-paragraph">Subscribe</p>
 
 
-        <form class="form">
+        <form class="footer-form">
           
-          <label class="form-label">
+          <label class="footer-form-label">
           
-            <input name="email-address" type="email" placeholder="E-mail" class="form-input"/>
+            <input name="email-address" type="email" placeholder="E-mail" class="footer-form-input"/>
           </label>
         
         
-          <button  type="submit" class="form-button">Subscribe
-            <svg width="24" height="24" class="form-first-svg">
+          <button  type="submit" class="footer-form-button">Subscribe
+            <svg width="24" height="24" class="footer-button-form-svg">
               <use href="./images/icons1.svg#icon-icon-send"></use>
             </svg>
           </button>
@@ -538,11 +538,11 @@
     </footer>
 
 
-    <div class="modal-div is-open">
+    <div class="modal-div is-hidden" data-modal>
 
       <div class="modal">
 
-<button type="button" class="modal-button">
+<button class="modal-button" type="button" data-modal-close>
 
   <svg width="8" height="8" class="modal-close-svg">
     <use href="./images/icons1.svg#icon-Vector-close"></use>
@@ -561,7 +561,7 @@
 </label>
 <div class="div-input-first">
 <input name="user-name" type="text" id="user-name" class="input-first">
-<svg width="18" height="24" class="form-svg">
+<svg width="18" height="24" class="modal-form-svg">
   <use href="./images/icons1.svg#icon-vector-1"></use>
 </svg>
 </div>
@@ -573,7 +573,7 @@
 </label>
 <div class="div-input-first">
 <input name="user-name" type="tel" id="user-tel" class="input-first">
-<svg width="18" height="24" class="form-svg">
+<svg width="18" height="24" class="modal-form-svg">
   <use href="./images/icons1.svg#icon-vector-2"></use>
 </svg>
 </div>
@@ -586,30 +586,30 @@
   </label>
   <div class="div-input-first">
   <input name="user-name" type="email" id="user-email" class="input-first">
-  <svg width="18" height="24" class="form-svg">
+  <svg width="18" height="24" class="modal-form-svg">
     <use href="./images/icons1.svg#icon-vector-3"></use>
   </svg>
   </div>
   </div>
 
 
-  <div class="form-comment">
+  <div class="modal-form-comment">
 
 <label for="user-comment" class="form-label-first">Comment</label>
 
-<textarea id="user-comment" name="user-comment" placeholder="Text input" class="form-textarea">
+<textarea id="user-comment" name="user-comment" placeholder="Text input" class="modal-form-textarea">
 </textarea>
 
   </div>
 
 
-  <div class="form-checkbox">
+  <div class="modal-form-checkbox">
 
-<input type="checkbox" id="user-privacy" value="true" name="user-privacy" class="visually-hidden checkbox-input">
+<input type="checkbox" id="user-privacy" value="true" name="user-privacy" class="visually-hidden modal-checkbox-input">
 
-<label for="user-privacy"  class="checkbox-label">
+<label for="user-privacy"  class="modal-checkbox-label">
   
-  <span class="checkbox-label-span">
+  <span class="modal-checkbox-label-span">
     <svg width="10" height="8" class="checkmark-svg">
       <use href="./images/icons1.svg#icon-Vector-checkmark"></use>
     </svg>
@@ -620,14 +620,14 @@
 
   
 
-  <a href="./index.html" class="checkbox-privacy-link">Privacy Policy</a>
+  <a href="./index.html" class="modal-checkbox-privacy-link">Privacy Policy</a>
 
 </label>
 
   </div>
 
 
-  <button type="submit" class="form-send-button">
+  <button type="submit" class="modal-form-send-button">
     Send
   </button>
 
@@ -638,6 +638,7 @@
       </div>
     </div>
 
+    <script src="./js/modal.js"></script>
 
   </body>
 </html>
