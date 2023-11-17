@@ -670,9 +670,9 @@ button {
 }
 
 .modal-checkbox-label {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -680,13 +680,13 @@ button {
 }
 
 .modal-checkbox-label-span {
-  width: 16px;
+  min-width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -740,4 +740,478 @@ button {
 .modal-checkbox-privacy-link:hover,
 .modal-checkbox-privacy-link:focus {
     color: #404bbf;
+}
+
+/* MOBILE MENU */
+
+/* mobile container */
+
+@media screen and (min-width: 320px) {
+    .container {
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*  */
+
+@media screen and (max-width: 767px) {
+  .mobile-menu-open-button {
+      background-color: transparent;
+      padding: 0;
+      line-height: 0;
+      fill: #2f2f37;
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.mobile-menu-open-button:hover,
+.mobile-menu-open-button:focus {
+  fill: #404bbf;
+}
+
+.mobile-menu {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding: 24px 24px 40px 16px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 999999999999;
+    transform: translateX(0%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-open {
+  transform: translateX(100%)
+}
+
+.mobile-menu-container {
+  max-width: 320px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-menu-close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: rgba(231, 233, 252, 0.1);
+  border: 1px solid rgba(46, 47, 66, 0.1);
+  border-radius: 50%;
+  padding: 0;
+  line-height: 0;
+  fill: #2e2f42;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-close-button:hover {
+  background-color: #404bbf;
+  border: none;
+  fill: #ffffff;
+}
+
+.mobile-menu-close-button:focus {
+  background-color: #404bbf;
+  border: none;
+  fill: #ffffff;
+}
+
+.mobile-menu-close-svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px
+}
+
+.mobile-nav-link {
+  color: #2e2f42;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  color: #404bbf;
+}
+
+.mobile-menu-contacts{
+  margin-bottom: 48px;
+}
+
+.mobile-menu-contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-menu-contacts-link {
+  color: #434455;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-contacts-link:hover,
+.mobile-menu-contacts-link:focus {
+  color: #4d5ae5;
+}
+
+.mobile-menu-socials-list {
+  display: flex;
+  gap: 40px;
+}
+
+.mobile-menu-socials-link {
+  display: block;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-socials-link:hover,
+.mobile-menu-socials-link:focus {
+  background-color: #31D0AA;
+}
+
+.mobile-menu-socials-svg {
+  fill: #f4f4fd;
+}
+
+/* TABLET */
+
+@media screen and (min-width: 768px) {
+  .container {
+      width: 768px;
+  }
+
+/* TABLET HEADER*/
+
+.mobile-menu-open-button,
+.mobile-menu {
+  display: none;
+}
+
+.nav-div {
+  display: flex;
+  gap: 120px;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-list-links {
+  display: block;
+  overflow: hidden;
+  padding: 24px 0;
+  color: #2e2f42;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-list-links:hover,
+.nav-list-links:focus {
+  color: #404bbf;
+}
+
+.studio-link {
+  color: #404bbf;
+  position: relative;
+}
+
+.studio-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: #404bbf;
+}
+
+.contacts {
+  display: block;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contacts-links {
+  color: #434455;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-links:hover,
+.contacts-links:focus {
+  color: #404bbf;
+}
+
+/* TABLET HERO */
+
+.hero-section {
+  padding: 112px 0;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)),url('../images/people-office.jpg');
+  max-width: 1440px;
+  }
+
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+.hero-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70),rgba(46, 47, 66, 0.70)),url('../images/people-office@2x.jpg');
+}
+  }
+
+.page-title {
+  max-width: 498px;
+  padding: 0;
+  margin-bottom: 36px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 56px;
+  line-height: 1.07;
+  text-transform: none;
+}
+
+/* TABLET ADVANTAGES */
+
+.advantages-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 72px;
+}
+
+.advantages-item {
+  width: calc((100% - 24px) / 2);
+}
+
+/* TABLET TEAM */
+
+.workers-list {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 64px;
+}
+
+.list-workers {
+  flex-wrap: calc((100% - 24px) / 2);
+}
+
+/* TABLET PORTFOLIO */
+
+.apps-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 72px;
+  gap: 24px;
+}
+
+.apps-list-item {
+  width: calc((100% - 24px) / 2);
+}
+
+/* TABLET_FOOTER */
+
+.footer-inner {
+  padding-left: 108px;
+  flex-direction: row;
+  gap: 24px;
+  flex-wrap: wrap;
+  row-gap: 72px;
+  justify-content: start;
+  align-items: baseline;
+}
+
+.footer-logo {
+  text-align: left;
+}
+
+.footer-paragraph {
+  max-width: 264px;
+}
+
+.footer-par {
+  text-align: left;
+}
+
+.footer-form {
+  flex-direction: row;
+  gap: 24px;
+}
+
+.footer-form-input {
+  width: 264px;
+}
+
+/*tablet modal */
+
+.modal-window {
+  width: 408px;
+  max-height: 584px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.modal-form {
+  width: 360px;
+}
+
+}
+/* DESKTOP */
+
+@media screen and (min-width: 1158px) {
+  .container {
+      width: 1158px;
+  }
+
+/* DESKTOP HEADER */
+
+.nav-div {
+  gap: 76px;
+}
+
+.contacts-list {
+  flex-direction: row;
+  gap: 40px;
+}
+
+.contacts-links {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* DESKTOP HERO */
+
+.hero-section {
+  padding: 188px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-title {
+  max-width: 496px;
+  margin-bottom: 48px;
+}
+
+/* DESKTOP ADVANTAGES */
+
+.advantages-list {
+  row-gap: 0;
+}
+.advantages-item {
+  width: calc((100% - 72px) / 4);
+}
+
+.advantages-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  background-color: #f4f4fd;
+}
+
+.advantages-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.advantages-paragraph {
+  font-weight: 400;
+}
+
+/* DESKTOP TEAM */
+
+.workers-list {
+  flex-wrap: nowrap;
+}
+
+.list-worker {
+  width: calc((100% - 72px) / 4);
+}
+
+/* DESKTOP PORTFOLIO */
+
+.apps-list-item {
+  width: calc((100% - 48px) / 3 );
+}
+
+/* DESKTOP FOOTER */
+
+.footer-inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding-left: 15px;
+}
+
+.footer-cont {
+  margin-right: 120px;
+}
+
+.footer-socials {
+  margin-right: 80px;
+}
+
+.footer-form-input {
+  border-color: #ffffff;
+}
+
+.footer-form-input::placeholder {
+  opacity: 1;
+}
+
+/* DESKTOP MODAL */
+
+.modal-form {
+  width: 360px;
+}
+
+.input-first {
+  height: 40px;
+  padding-left: 38px;
+}
+
 }
